@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    password: Chen@123
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3307/jxc?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+server:
+  port: 8009
