@@ -28,7 +28,7 @@ echo "服务环境：$RUN_EVN"
 
 echo "create $IMG_PATH"
 
-mkdir -p $IMG_PATH
+sudo mkdir -p $IMG_PATH
 
 #私服访问url路径和编译之后镜像文件存放到指定路径固定,不动态参数进行处理传值.
 
