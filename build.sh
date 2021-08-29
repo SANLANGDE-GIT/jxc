@@ -32,7 +32,7 @@ sudo mkdir -p $IMG_PATH
 
 #私服访问url路径和编译之后镜像文件存放到指定路径固定,不动态参数进行处理传值.
 
-REGISTRY_URL="49.234.220.70:5000"
+REGISTRY_URL="49.234.220.70:81"
 
 IMG_TAR_GZ_PATH="/home/img_tar_gz_path/"
 
