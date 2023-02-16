@@ -7,7 +7,7 @@
 	<groupId>com.atguigu</groupId>
 	<artifactId>jxc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>jxc</name>
 	<description>Demo project for Spring Boot</description>
@@ -118,6 +118,10 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<fork>true</fork>
+					<mainClass>com.atguigu.jxc.JxcApplication</mainClass>
+				</configuration>
 			</plugin>
 			<!--docke rmaven编译插件-->
 			<plugin>
@@ -147,6 +151,50 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<resources>
+			<!-- 使用jar包方式 修改静态资源位置-->
+			<resource>
+				<directory>src/main/webapp</directory>
+				<targetPath>static</targetPath>
+				<includes>
+					<include>**/**</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/**</include>
+				</includes>
+			</resource>
+		</resources>
 	</build>
-
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<envirenment>dev</envirenment>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<envirenment>test</envirenment>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<envirenment>prod</envirenment>
+			</properties>
+		</profile>
+	</profiles>
 </project>

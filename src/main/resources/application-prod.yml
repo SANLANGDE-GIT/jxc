@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    password: Chen@123
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://192.168.75.135:3306/jxc?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+
+# mybatis
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
