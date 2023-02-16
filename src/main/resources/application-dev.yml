@@ -3,7 +3,11 @@ spring:
     password: root
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    username: croot
+    username: root
     url: jdbc:mysql://localhost:3306/jxc?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-server:
-  port: 8009
+
+# mybatis
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
