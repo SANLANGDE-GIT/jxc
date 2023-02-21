@@ -152,7 +152,6 @@
 			</plugin>
 		</plugins>
 		<resources>
-			<!-- 使用jar包方式 修改静态资源位置-->
 			<resource>
 				<directory>src/main/webapp</directory>
 				<targetPath>static</targetPath>
